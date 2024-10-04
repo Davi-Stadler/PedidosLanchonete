@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sucesso</title>
+    
+</head>
+<body>
+    <h1>Operação Concluída com Sucesso!</h1>
+    <p>Seu produto foi adicionado com sucesso ao sistema.</p>
+    
+    <!-- Botão de voltar -->
+    <button onclick="window.history.back()">Voltar</button>
+</body>
+</html>

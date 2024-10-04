@@ -1,0 +1,40 @@
+{% extends "templates/base.peb" %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <title>Cadastrar Pedido</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+  <h1>Cadastrar Pedido</h1>
+</header>
+  <form method="post" action="/addPedido" class="form">
+    <label for="lanches">Lanches:</label>
+    <select name="lancheId" id="lanches" value="{{lancheId}}" class="input">
+      {% for lanche in lanches %}
+        <option value="{{lanche.id}}" {% if lanche.id == lancheId %} selected {% endif %}>
+          {{lanche.nome}} R${{lanche.valor}}
+        </option>
+      {% endfor %}
+    </select>
+    <br/>
+    <label for="bebidas">Bebidas:</label>
+    <select name="bebidaId" id="bebidas" value="{{bebidaId}}" class="input">
+      {% for bebida in bebidas %}
+        <option value="{{bebida.id}}" {% if bebida.id == bebidaId %} selected {% endif %}>
+          {{bebida.nome}} R${{bebida.valor}}
+        </option>
+      {% endfor %}
+    </select>
+    <br/>
+    <label for="titulo">Observação:</label>
+    <input type="text" id="observacao" name="observacao" value="{{observacao}}" class="input"/><br />
+
+    <a href="/" class="a_voltar">Voltar</a>    
+    <input type="submit" class="submit"/>
+  </form>
+</body>
+</html>
+{% endblock %}

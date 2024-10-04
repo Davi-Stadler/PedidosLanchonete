@@ -1,0 +1,8 @@
+{% extends "templates/base.peb" %}
+
+
+
+ {%block content%}
+    <h1>Aqui vão os pedidos</h1>
+ {%endblock%}
+

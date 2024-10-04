@@ -1,0 +1,29 @@
+{% extends "templates/base.peb" %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <title>Lista de Lanches</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+  <h1>Lista de Lanches</h1>
+  </header>
+
+  {% if resultado.foiErro %}
+    <h1>{{ resultado.getMsg }}</h1>
+  {% else %}
+    <ul>
+      {% for lanche in lista %}
+        <li>id: {{ lanche.id }}, {{ lanche.nome }}, Valor: R${{ lanche.valor }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+  
+  <a href="/" class="a_voltar">Voltar</a>    
+
+</body>
+</html>
+{% endblock %}

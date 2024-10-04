@@ -1,0 +1,28 @@
+{% extends "templates/base.peb" %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <title>Pedidos cadastrados</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+  <h1>Pedidos cadastrados</h1>
+</header>
+  {% if resultado.foiErro %}
+    <h1>{{ resultado.getMsg }}</h1>
+  {% else %}
+    <ul>
+      {% for pedido in lista %}
+        <li>id: {{ pedido.id }}. Lanche:{{ pedido.lanche.nome }}, Bebida: {{ pedido.bebida.nome }}, Observação: {{ pedido.observacao }}.</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+  
+  <a href="/" class="a_voltar">Voltar</a>
+
+</body>
+</html>
+{% endblock %}

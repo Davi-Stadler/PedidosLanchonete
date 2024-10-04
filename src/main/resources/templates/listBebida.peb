@@ -1,0 +1,29 @@
+{% extends "templates/base.peb" %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+  <title>Lista de Bebidas</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+  <h1>Lista de Bebidas</h1>
+</header>
+  {% if resultado.foiErro %}
+    <h1>{{ resultado.getMsg }}</h1>
+  {% else %}
+    <ul>
+      {% for bebida in lista %}
+        <li>id: {{ bebida.id }}, {{ bebida.nome }}, Valor: R${{ bebida.valor }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+  
+  <a href="/" class="a_voltar">Voltar</a>    
+
+</body>
+</html>
+{% endblock %}

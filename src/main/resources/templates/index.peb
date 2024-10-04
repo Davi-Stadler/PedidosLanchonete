@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <title>ATIVIDADE FINAL DAVI MENDES</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Sistema de Pedidos</h1>
+    
+  </header>
+  <a href="/addLanche">Cadastrar Lanche</a>
+  <a href="/listLanche">Listar lanches</a>
+  <a href="/addBebida">Cadastrar Bebida</a>
+  <a href="/listBebida">Listar bebidas</a>
+  <a href="/addPedido">Cadastrar pedido</a>
+  <a href="/listPedido">Listar pedidos</a>
+</body>
+</html>
